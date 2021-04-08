@@ -1,0 +1,20 @@
+(前回)
+①index.phpのフォーム入力・送信でデータ送信
+②insert.phpでデータ受信・SQLに連携
+③select.phpにデータ一覧が溜まる
+
+(今回)
+④更新
+1 更新するため、select.phpにaタグを追記しGETでid送る
+2 GETで送られてきたidのうち該当のものだけbm_update_view.phpで受信
+  bm_update.phpに更新データ送信
+3 POSTで送られてきたデータをbm_update.phpで受信
+  UPDATEしたデータをSQLにデータ連携
+  bm_list_view.phpに更新されたデータ一覧が表示される
+  ↑ header関数で自動処理（=関数化したredirectで飛ばすだけ） ↑
+
+⑤削除
+1 削除するため、select.phpにaタグを追記しGETでid送る
+2 GETで送られてきたidのうち該当のものだけbm_delete.phpで受信
+3 DELETEしたデータをSQLにデータ連携
+4 index.phpにリダイレクト
